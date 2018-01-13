@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title || 'nemo'%></title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<% for (var js in htmlWebpackPlugin.files.js) { %>
+<script src="<%= htmlWebpackPlugin.files.js[js] %>" charset="utf-8"></script>
+<% } %>

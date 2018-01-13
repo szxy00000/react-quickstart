@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "flow",
+    "env",
+    "stage-1",
+    "react"
+  ],
+  "plugins": [
+    
+  ]
+}
