@@ -1,19 +1,14 @@
 import React from 'react';
-import {
-  Route,
-} from 'react-router-dom';
-import {
-  ConnectedRouter,
-} from 'react-router-redux';
-import createHistory from 'history/createHashHistory';
+import { Router, Route, hashHistory } from 'react-router';
+
 import app from '../page/app';
+import demo from '../page/demo';
 
-const history = createHistory();
 
-const routerGallery = () => (
-  <ConnectedRouter history={history} >
-    <Route component={app} />
-  </ConnectedRouter>
+export default (
+  <Router history={hashHistory} >
+    <Route component={app} path="/">
+      <Route component={demo} path="demo"></Route>
+    </Route>
+  </Router>
 );
-
-export default routerGallery;
