@@ -9,8 +9,8 @@ class Demo extends React.Component {
 
   }
   render (){
-    return (<div className="demo">
-      demo
+    return (<div className='demo'>
+       demo
     </div>
     );
   }

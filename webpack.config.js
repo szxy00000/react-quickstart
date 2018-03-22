@@ -43,12 +43,14 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        enforce : "pre",
-        test: /\.(js|jsx)$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
-        use : 'eslint-loader'
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: path.resolve(__dirname, 'node_modules'),
+      //   loader : 'eslint-loader',
+      //   options: {
+      //     emitWarning: true
+      //   }
+      // },
       {
         test: /\.(js|jsx)$/,
         exclude: path.resolve(__dirname, 'node_modules'),

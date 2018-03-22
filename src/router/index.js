@@ -6,8 +6,8 @@ import Demo from '../page/Demo';
 
 export default (
   <Router history={hashHistory} >
-    <Route component={App} path="/">
-      <Route component={Demo} path="demo"></Route>
+    <Route component={App} path='/'>
+      <Route component={Demo} path='demo'></Route>
     </Route>
   </Router>
 );
