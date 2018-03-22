@@ -43,6 +43,7 @@
       2,
       "always"
     ],
-    "no-class-assign": 0
+    "no-class-assign": 0,
+    "react/prop-types": 0
   }
 }
