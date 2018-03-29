@@ -1,7 +1,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const PrepackWebpackPlugin = require("prepack-webpack-plugin").default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -91,11 +90,6 @@ module.exports = {
     }),
 
     // enable HMR globally
-
-
-    // prints more readable module names in the browser console on HMR updates
-    new LodashModuleReplacementPlugin,
-
     new webpack.ProvidePlugin({
         $: 'jquery',
         "setConfig" : path.resolve(
