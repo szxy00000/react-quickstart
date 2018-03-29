@@ -6,9 +6,9 @@
   "author": "luoxincheng <474021406@qq.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src/ -d lib/",
+    "lib": "babel src/ -d lib/",
     "start": "webpack-dev-server --progress --hot  --content-base  --config webpack.config.js",
-    "compile-prod": "webpack -p --config webpack.production.config.js --progress"
+    "build": "webpack -p --config webpack.production.config.js --progress"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
