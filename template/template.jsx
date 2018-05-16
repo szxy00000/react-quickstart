@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './index.less';
-// import {actions} from 'redux/template';
+// import {actions} from 'store/template';
 
 class Template extends React.Component {
   constructor (props){

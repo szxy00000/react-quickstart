@@ -35,7 +35,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
     alias: {
-      redux: path.resolve(__dirname, "src/redux")
+      store: path.resolve(__dirname, "src/store")
     }
   },
   externals: {

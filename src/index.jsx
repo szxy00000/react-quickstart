@@ -4,7 +4,7 @@ import _ from 'lodash';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
-import reducers from './redux';
+import reducers from './store';
 
 import RouterGallery from './router';
 
