@@ -39,5 +39,5 @@ yarn start
 
 ### 附带快速新增页面工具：
 ``` npm run page $pagename ```  $pagename为要新增页面的名称
-运行命令后会生成符合上面逻辑的页面，less，redux，在手动到router/index.js中添加路由即可
+运行命令后会生成符合上面逻辑的页面，less，redux，再手动到router/index.js中添加路由即可
 
