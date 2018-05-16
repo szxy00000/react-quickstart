@@ -13,11 +13,11 @@ yarn start
 ##### 关于页面：
  - 每个页面 仅有路由的页面连接redux，子页面均通过 {...this.props} 的形式传值，保证数据流向单一
  - 页面中的模块，若有复用可能，放在component文件夹中，否则放在页面index.jsx同级
- - 每个页面/模块可以通过 import { actions } from 'redux/$pageName' 的形式获得action 然后进行dispatch
+ - 每个页面/模块可以通过 import { actions } from 'store/$pageName' 的形式获得action 然后进行dispatch
 
 ##### 关于redux：
  - 设计的思路：
-    开发的时候只需要一边维护action用来发请求，准备数据，一边维护页面view，不需要关心新增types，不需要新增reducer，不需要去总reducer的combine里添加reducer（这块参考 src/redux/index.js 已经集中处理，将store文件名作为页面store名），大幅减少开发过程中文件切换工作
+    开发的时候只需要一边维护action用来发请求，准备数据，一边维护页面view，不需要关心新增types，不需要新增reducer，不需要去总reducer的combine里添加reducer（这块参考 src/store/index.js 已经集中处理，将store文件名作为页面store名），大幅减少开发过程中文件切换工作
  - 每个页面是自己的一个小的store，所以每个页面只需要维护自己的小store，大多数情况只需要一个更新操作来更新这个小store
     更新操作如下：
        ```
@@ -29,15 +29,15 @@ yarn start
 
     对应只需要一个reducer：
        ```
-       	  if (type === TYPES.UPDATE_PROPS) {
-       	  	return {
-       	  		...state,
-       	  		...payload
-       	  	}
-       	  }
+          if (type === TYPES.UPDATE_PROPS) {
+            return {
+              ...state,
+              ...payload
+            }
+          }
        ```
 
 ### 附带快速新增页面工具：
 ``` npm run page $pagename ```  $pagename为要新增页面的名称
-运行命令后会生成符合上面逻辑的页面，less，redux，再手动到router/index.js中添加路由即可
+运行命令后会生成符合上面逻辑的页面，less，store，再手动到router/index.js中添加路由即可
 
