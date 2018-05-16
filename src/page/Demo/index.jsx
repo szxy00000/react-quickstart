@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-// import {actions} from '../../redux/demo';
+import './index.less';
+// import {actions} from 'redux/demo';
 
 class Demo extends React.Component {
   constructor (props){
