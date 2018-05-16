@@ -19,8 +19,8 @@ exports.actions = {
 export default (state = initialState, { type, payload }) => {
   if (type === TYPES.UPDATE_PROPS) {
     return {
-        ...state,
-        ...payload
+      ...state,
+      ...payload
     };
   }
   return state;
