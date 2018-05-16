@@ -8,7 +8,8 @@
   "scripts": {
     "lib": "babel src/ -d lib/",
     "start": "webpack-dev-server --progress --hot  --content-base  --config webpack.config.js",
-    "build": "webpack -p --config webpack.production.config.js --progress"
+    "build": "webpack -p --config webpack.production.config.js --progress",
+    "page": "sh ./template/newpage.sh"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",

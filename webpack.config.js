@@ -20,7 +20,7 @@ const configuration = {
 module.exports = {
   devtool: 'inline-source-map',
   devServer: {
-    contentBase : path.resolve(__dirname , 'dDist'),
+    contentBase : path.resolve(__dirname , 'template'),
     publicPath : '/',
     host : '0.0.0.0',
     port : 8089
@@ -34,7 +34,9 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
-    
+    alias: {
+      redux: path.resolve(__dirname, "src/redux")
+    }
   },
   externals: {
     'AMap' : 'AMap',
@@ -107,7 +109,7 @@ module.exports = {
       filename: 'index.html',
       // 关闭该插件默认的注入css、js，完全由模版控制
       inject: false,
-      template: '../dDist/index.html',
+      template: '../template/index.html',
     }),
   ]
 };

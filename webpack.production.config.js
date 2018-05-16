@@ -22,6 +22,9 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
+    alias: {
+      redux: path.resolve(__dirname, "src/redux")
+    }
   },
   externals: {
     'AMap' : 'AMap',
@@ -89,11 +92,11 @@ module.exports = {
     // 生成最后的html文件（渲染模版的方式）
     // 这样可以带过去文件的hash值，也方便迭代管理
     new HtmlWebpackPlugin({
-      title: 'DUSE-EYE',
+      title: 'NEMO',
       filename: 'index.html',
       // 关闭该插件默认的注入css、js，完全由模版控制
       inject: false,
-      template: '../dDist/index.html',
+      template: '../template/index.html',
     }),
   ]
 };
