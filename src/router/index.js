@@ -1,13 +1,15 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import App from '../page/App';
 import Demo from '../page/Demo';
 
 export default (
-  <Router history={hashHistory} >
-    <Route component={App} path='/'>
-      <Route component={Demo} path='demo'></Route>
-    </Route>
-  </Router>
+  <HashRouter>
+    <App>
+      <Switch>
+        <Route component={Demo} path='/demo'></Route>
+      </Switch>
+    </App>
+  </HashRouter>
 );

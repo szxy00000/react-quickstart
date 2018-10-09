@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './index.less';
-// import {actions} from 'redux/demo';
+import { actions } from 'store/demo';
 
 class Demo extends React.Component {
   constructor (props){
@@ -9,10 +9,11 @@ class Demo extends React.Component {
 
   }
   render (){
-    return (<div className='demo'>
+    return <div className='demo' onClick={() => {
+      this.props.updateCur('demo');
+    }}>
        demo
-    </div>
-    );
+    </div>;
   }
 }
 
@@ -20,4 +21,4 @@ export default connect(state => {
   return {
     ...state.demo
   };
-})(Demo);
+}, actions)(Demo);

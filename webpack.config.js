@@ -1,8 +1,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const PrepackWebpackPlugin = require("prepack-webpack-plugin").default;
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // const Dashboard = require('webpack-dashboard');
@@ -35,7 +35,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
     alias: {
-      store: path.resolve(__dirname, "src/store")
+      store: path.resolve(__dirname, 'src/store'),
+      pure: path.resolve(__dirname, 'src/pure'),
     }
   },
   externals: {
@@ -85,19 +86,19 @@ module.exports = {
       names: ['vendor'],
       filename: 'vendor.js',
       minChunks: ({resource}) => {
-          resource &&
+        resource &&
           resource.indexOf('node_modules') &&
-          resource.match(/\.js$/)
+          resource.match(/\.js$/);
       }
     }),
 
     // enable HMR globally
     new webpack.ProvidePlugin({
-        $: 'jquery',
-        "setConfig" : path.resolve(
-          __dirname,
-          "./src/config/devQueueConfig"
-        ),
+      $: 'jquery',
+      'setConfig' : path.resolve(
+        __dirname,
+        './src/config/devQueueConfig'
+      ),
     }),
 
     // 使用webpack-dashboard，但是输出的信息在item2里，显示容易错乱
