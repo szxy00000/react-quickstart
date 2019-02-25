@@ -1,3 +1,3 @@
-export function parseData() {
-  return {};
+export function demo(a, b) {
+  return a + b;
 }
