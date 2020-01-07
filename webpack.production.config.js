@@ -23,7 +23,13 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
     alias: {
-      store: path.resolve(__dirname, "src/store")
+      common: path.resolve(__dirname, 'src/common'),
+      component: path.resolve(__dirname, 'src/component'),
+      config: path.resolve(__dirname, 'src/config'),
+      page: path.resolve(__dirname, 'src/page'),
+      static: path.resolve(__dirname, 'src/static'),
+      store: path.resolve(__dirname, 'src/store'),
+      pure: path.resolve(__dirname, 'src/pure')
     }
   },
   externals: {
